@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--header design-->
+    <header>
+      <a href="#" class="logo">Cod<span>e</span>r.</a>
+      <ul class="navlist">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <!--home section-->
+    <section class="home" id="home">
+      <div class="home-text">
+        <div class="slide">
+          <span class="one">Hello</span>
+          <span class="two">I`m</span>
+        </div>
+        <h1>Andrei</h1>
+        <h3>
+          Student at the Faculty of Electrical Engineering
+          <span>and Computer Science</span> from USV
+        </h3>
+        <p>Junior Web Developer</p>
+        <div class="button">
+          <a href="#" class="btn">Say Hello</a>
+          <a href="#" class="btn2"
+            ><span><i class="bx bx-play"></i></span>Watch My Work</a
+          >
+        </div>
+      </div>
+    </section>
+    <!--about section design-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="images/Andrei2.jpg" />
+      </div>
+      <div class="about-text">
+        <h2>About<span>Me</span></h2>
+        <h4>Web Developer and Student</h4>
+        <p>
+          I am a student at the Faculty of Electrical Engineering and Computer
+          Science at the Stefan Cel Mare University in Suceava, specializing in
+          Computers and I am passionate about Web Development!
+        </p>
+
+        <a href="me.html" class="btn">More About</a>
+      </div>
+    </section>
+    <!--service design-->
+    <section class="services" id="services">
+      <div class="main-text">
+        <p>What I am Expert In</p>
+        <h2><span>My</span>Services</h2>
+      </div>
+      <div class="services-content">
+        <div class="box">
+          <div class="s-icons">
+            <i class="bx bx-code-alt"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>
+            For me, web development is one of my biggest passions and I try to
+            do the best job. I create websites trying to combine the useful with
+            the pleasant.
+          </p>
+          <a href="#" class="read">Read More</a>
+        </div>
+      </div>
+    </section>
+    <!--portfolio section design-->
+    <section class="portfolio" id="portfolio">
+      <div class="main-text">
+        <p>Portfolio</p>
+        <h2><span>Latest</span> Project</h2>
+      </div>
+
+      <div class="portfolio-content">
+        <div class="row"></div>
+      </div>
+    </section>
+    <!--contact section design-->
+    <section class="contact" id="contact">
+      <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>If You Have Any Ideea For project In Your Mind</h4>
+        <p><i class="bx bxs-phone"></i> 0742612068</p>
+        <p><i class="bx bx-mail-send"></i> iroftei390@gmail.com</p>
+        <!--<p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
+          consectetur?
+        </p>-->
+        <div class="contact-icons">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-whatsapp"></i></a>
+          <a href="#"><i class="bx bxl-gmail"></i></a>
+          <a href="#"></a>
+        </div>
+      </div>
+      <!--<div class="list"></div>-->
+
+      <div class="contact-form">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email Address"
+            required
+          />
+          <input
+            type="number"
+            name="Phone"
+            placeholder="Your Mobile Number"
+            required
+          />
+          <textarea
+            name="Message"
+            cols="35"
+            rows="10"
+            placeholder="How Can I Help You"
+            required
+          ></textarea>
+          <button type="submit" class="btn3">Submit</button>
+        </form>
+      </div>
+    </section>
+    <!--end section design-->
+    <section class="end">
+      <div class="last-text">
+        <p>Copyright 2023 by Iroftei Dumitru-Andrei All Rights Reserved</p>
+      </div>
+      <div class="top">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </section>
+    <!--custom js link-->
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbxWWh9Pm5yBBBR4kIsCIkvZpVZe7zYKXzpQ1vmjAlQ_AaYkqNTjgy_FwC6pqSOI8BUYjA/exec';
+      const form = document.forms['submit-to-google-sheet'];
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => console.log('Success!', response))
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+  </body>
+</html>
